@@ -14,6 +14,13 @@
 
   <packaging>peergreen-server</packaging>
 
+  <scm>
+    <connection>scm:git:https://forge.peergreen.com/git/git/webconsole/peergreen-control-point-server.git</connection>
+    <developerConnection>scm:git:https://forge.peergreen.com/git/git/webconsole/peergreen-control-point-server.git</developerConnection>
+    <url>https://forge.peergreen.com/git/summary/?r=webconsole/peergreen-control-point-server.git</url>
+    <tag>HEAD</tag>
+  </scm>
+
   <dependencies>
     <!-- Tomcat dependencies -->
 
