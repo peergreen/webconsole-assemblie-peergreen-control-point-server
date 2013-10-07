@@ -8,7 +8,7 @@
   </parent>
   <groupId>com.peergreen.webconsole</groupId>
   <artifactId>peergreen-control-point-server</artifactId>
-  <version>1.0.0-M1</version>
+  <version>1.0.0-M2-SNAPSHOT</version>
 
   <packaging>peergreen-server</packaging>
 
@@ -16,7 +16,7 @@
     <connection>scm:git:https://forge.peergreen.com/git/git/webconsole/peergreen-control-point-server.git</connection>
     <developerConnection>scm:git:https://forge.peergreen.com/git/git/webconsole/peergreen-control-point-server.git</developerConnection>
     <url>https://forge.peergreen.com/git/summary/?r=webconsole/peergreen-control-point-server.git</url>
-    <tag>PEERGREEN_CONTROL_POINT_SERVER_1_0_0_M1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <dependencies>
