@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.peergreen.server</groupId>
+    <artifactId>abstract-ee-server</artifactId>
+    <version>1.0.0-M3</version>
+  </parent>
+  <groupId>com.peergreen.webconsole</groupId>
+  <artifactId>peergreen-control-point-server</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+
+  <packaging>peergreen-server</packaging>
+
+  <dependencies>
+    <!-- Tomcat dependencies -->
+
+    <!-- Web technologies API -->
+    <dependency>
+      <groupId>org.ow2.spec.ee</groupId>
+      <artifactId>ow2-el-2.2-spec</artifactId>
+      <version>${ow2-spec.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.ow2.spec.ee</groupId>
+      <artifactId>ow2-jsp-2.2-spec</artifactId>
+      <version>${ow2-spec.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.ow2.spec.ee</groupId>
+      <artifactId>ow2-servlet-3.0-spec</artifactId>
+      <version>${ow2-spec.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- WEB metadata-->
+    <dependency>
+      <groupId>org.ow2.util.metadata</groupId>
+      <artifactId>metadata-war-impl</artifactId>
+      <version>${javaee-metadata.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.ow2.util.metadata</groupId>
+      <artifactId>metadata-ws-impl</artifactId>
+      <version>${javaee-metadata.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Web base peergreen bundles -->
+    <dependency>
+      <groupId>com.peergreen.webcontainer</groupId>
+      <artifactId>peergreen-webcontainer-base</artifactId>
+      <version>${webcontainer-base.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Tomcat7 peergreen bundles -->
+    <dependency>
+      <groupId>com.peergreen.webcontainer</groupId>
+      <artifactId>peergreen-webcontainer-tomcat7</artifactId>
+      <version>${webcontainer-tomcat7.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Peergreen Console Kernel -->
+    <dependency>
+      <groupId>com.peergreen.webconsole</groupId>
+      <artifactId>peergreen-console-kernel</artifactId>
+      <version>1.0.0-M1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Peergreen Control Center Console -->
+    <dependency>
+      <groupId>com.peergreen.webconsole</groupId>
+      <artifactId>peergreen-control-center-console</artifactId>
+      <version>1.0.0-M1</version>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.peergreen.kernel</groupId>
+        <artifactId>kernel-maven-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <serverName>Peergreen Control Point Server</serverName>
+          <specification>org.osgi/org.osgi.core/5.0.0</specification>
+          <framework>org.eclipse.tycho/org.eclipse.osgi/3.9.0.v20130529-1710</framework>
+          <levels>
+            <startlevel>
+              <level>2</level>
+              <bundles>
+                <bundle>com.peergreen.shelbie:shelbie-local-console:jar</bundle>
+              </bundles>
+            </startlevel>
+          </levels>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+    
+</project>
